@@ -1,26 +1,105 @@
-# Contact-Mangement-System
-This Contact Management System is a Python program that can manage the list of contact information. The purpose of the system is to organize the list of all available contacts such as by inputting names and contact numbers. This program was built using only Python language.
+# 📇 Contact Management System 
 
-![img](./contact-management-system-project-in-python.png)
+A desktop-based **Contact Management System** built using **Python** and **SQL**. This application provides a simple GUI to **add, view, update, and delete contacts**, with data stored locally in an SQL database.
 
-# About the Project
-The project is a simple GUI application that uses the Tkinter module in order to create a design view. The system can be accessed without the use of login information. The user can add a new contact by providing personal details such as first name, last name, gender, address, and contact number. The system table can also be updating the contact list if he/she double click the row of that particular data. The system was made simpler so that beginners can learn and enhance their programming skills in developing the python language.
+---
 
-# Features:
-* The user can view the list of all contact as soon as the application has launched.
-* You can freely add more contacts by supplying the needed details.
-* The system has a function that can update the list of contact by double-clicking the targeted row and change the data in the input field.
-* The system also allowed to delete some contact by clicking the targeted row and click the delete button
 
-# Installation:
-1. You will have to download & install the Python IDLE's, here's the link https://www.python.org/downloads/.
-2. Extract the zip file.
-3. Open the extracted folder
-4. Locate the py file.
-5. Then open the file via Python IDLE.
-6. Run the py file to launch the program.
+## ✨ Features
 
-FOR YOUR OWN SAFETY, PLEASE:
+* ➕ Add new contacts
+* ✏️ Update existing contacts
+* ❌ Delete contacts with confirmation
+* 📋 View all contacts in a table
+* 🖱️ Double‑click a contact to edit
+* 💾 Automatic database creation
 
-1. Re-scan downloaded files using your personal virus checker before using it.
-2. NEVER, EVER run compiled files (.exe's, .ocx's, .dll's etc.)--only run source code.
+---
+
+## 🖥️ Application Overview
+
+### Main Window
+
+* Displays all contacts in a table
+* **Add New** button to insert contacts
+* **Delete** button to remove selected contacts
+
+### Add / Update Window
+
+* Fields:
+
+  * Firstname
+  * Lastname
+  * Gender
+  * Age
+  * Address
+  * Contact
+* Gender selection using radio buttons
+* Save or Update functionality
+
+---
+
+## 🗄️ Database Details
+
+The application uses an SQLite database named **`contact.db`**.
+
+### Table: `member`
+
+```
+mem_id   INTEGER  PRIMARY KEY AUTOINCREMENT
+firstname TEXT
+lastname  TEXT
+gender    TEXT
+age       TEXT
+address   TEXT
+contact   TEXT
+```
+
+The database and table are created automatically when the application runs for the first time.
+
+---
+
+## 🚀 How to Run
+
+### 1️⃣ Requirements
+
+* Python 3.x installed on your system
+
+Check Python version:
+
+```bash
+python --version
+```
+
+---
+
+### 2️⃣ Run the Application
+
+```bash
+python main.py
+```
+
+> Replace `main.py` with the actual filename if different.
+
+---
+
+## 🧠 How It Works
+
+* On startup, the app initializes the SQLite database
+* Contact records are loaded into a Treeview table
+* Double‑clicking a record opens the update window
+* All CRUD operations are synced with the database
+
+---
+
+## ⚠️ Notes
+
+* All fields are required when adding or updating contacts
+* Age should be entered as a numeric value
+* `contact.db` will be created in the project directory
+
+---
+
+## 📄 License
+
+This project is open‑source and intended for educational and personal use.
