@@ -3,7 +3,6 @@ import sqlite3
 import tkinter.ttk as ttk
 import tkinter.messagebox as tkMessageBox
 
-#DEVELOPED BY Mark Arvin
 root = Tk()
 root.title("Contact Management System")
 width = 700
@@ -300,3 +299,4 @@ if __name__ == '__main__':
     Database()
     root.mainloop()
     
+
